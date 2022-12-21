@@ -18,6 +18,12 @@
 #
 ###
 FROM quay.io/quarkus/quarkus-micro-image:1.0
+
+ENV kafka_broker_url=localhost:9092
+ENV kafka_topic=bintopickafka
+ENV mqtt_broker_url=localhost:1883
+ENV mqtt_topic=bintopic
+
 WORKDIR /work/
 RUN chown 1001 /work \
     && chmod "g+rwX" /work \
