@@ -78,7 +78,10 @@
 FROM registry.access.redhat.com/ubi8/openjdk-17:1.14
 
 ENV LANGUAGE='en_US:en'
-
+ENV kafka_broker_url=localhost:9092
+ENV kafka_topic=bintopickafka
+ENV mqtt_broker_url=localhost:1883
+ENV mqtt_topic=bintopic
 
 # We make four distinct layers so if there are application changes the library layers can be re-used
 COPY --chown=185 target/quarkus-app/lib/ /deployments/lib/
