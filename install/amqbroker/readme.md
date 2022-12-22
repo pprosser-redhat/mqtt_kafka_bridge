@@ -1,6 +1,6 @@
 Clone this git repo
 
-cd {your directory}/mqtt_kafka_bridge/src/main/install/amqbroker
+cd {your directory}/mqtt_kafka_bridge/install/amqbroker
 
 
 To run a single node AMQ Broker, then run :-
