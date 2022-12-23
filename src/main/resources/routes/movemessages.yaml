@@ -2,6 +2,8 @@
     from:
       uri: paho-mqtt5:{{mqtt_topic}}
       steps:
+        - log:
+            message: '{{kafka_broker_url}}'
         - to:
             uri: log:mqtt
             parameters:
@@ -11,7 +13,7 @@
         - to:
             uri: kafka:{{kafka_topic}}
             parameters:
-              brokers: '{{kafka_broker_url}}'
+              brokers: "{{kafka_broker_url}}"
               clientId: camelwriter
       parameters:
         clientId: camelReader
