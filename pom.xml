@@ -116,7 +116,7 @@
                         <staticAfter>true</staticAfter>
                         <staticGroups>java.,javax.,org.w3c.,org.xml.,junit.</staticGroups>
                     </configuration>
-                </plugin>
+                </plugin> 
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -177,7 +177,7 @@
                 </executions>
             </plugin>
 
-            <plugin>
+            <!-- <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
                 <executions>
@@ -203,7 +203,7 @@
                         <phase>process-sources</phase>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 
