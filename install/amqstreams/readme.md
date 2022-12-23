@@ -8,3 +8,6 @@ podman run -d --name amqstreams -p 9092:9092 -e LOG_DIR=/tmp/logs  registry.redh
 If you want to see the messaged arriving on the kafka topic then run the following :-
 
 podman exec -it amqstreams bin/kafka-console-consumer.sh --bootstrap-server 192.168.59.3:9092 --topic bintopickafka
+
+
+Running in podman with the above command does recover from stopping the container. Need to remove and execute podman rnu again. I suspect it's using storage in the container than is causing the problem 
