@@ -16,6 +16,12 @@
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.6
 WORKDIR /work/
+
+ENV kafka_broker_url=localhost:9092
+ENV kafka_topic=bintopickafka
+ENV mqtt_broker_url=localhost:1883
+ENV mqtt_topic=bintopic
+
 RUN chown 1001 /work \
     && chmod "g+rwX" /work \
     && chown 1001:root /work
