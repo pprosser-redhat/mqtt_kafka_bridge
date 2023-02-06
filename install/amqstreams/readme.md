@@ -1,6 +1,6 @@
 Running AMQ Streams Kafka in podman
 
-This will run Kafka without zookeeper
+This will run Kafka without zookeeper (NOT working at the mo.... Camel cannot connect, need to investigate)
 
 podman run -d --name amqstreams -p 9092:9092 -e LOG_DIR=/tmp/logs  registry.redhat.io/amq7/amq-streams-kafka-32-rhel8:2.2.0-13 /bin/sh -c 'export CLUSTER_ID=$(bin/kafka-storage.sh random-uuid) && bin/kafka-storage.sh format -t $CLUSTER_ID -c config/kraft/server.properties && bin/kafka-server-start.sh config/kraft/server.properties'
 
